@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinación | Cecosesola</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="coordinacion.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../../src/products.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+
+<body>
+    <div class="background-glow"></div>
+
+    <div class="coord-wrapper">
+        <header>
+            <a href="../../index.html" class="btn-back">
+                <span>🏠</span> VOLVER AL INICIO
+            </a>
+            <div class="header-brand">
+                <img src="../../logo-cecosesola-blanco-1.png" alt="Logo" style="height: 40px;">
+            </div>
+        </header>
+
+        <main>
+            <div class="coord-title">
+                <h1>📋 COORDINACIÓN DE INVENTARIO</h1>
+                <p>Gestión centralizada de personal por áreas</p>
+            </div>
+
+            <div id="aisleList" class="aisle-grid">
+                <!-- Se inyectan filas de pasillo -->
+                <p style="text-align:center; opacity:0.5;">Selecciona un pasillo para empezar</p>
+            </div>
+        </main>
+    </div>
+
+    <div class="actions-footer">
+        <button id="addAreaBtn" class="btn-action btn-add">
+            <span>➕</span> AÑADIR ÁREA
+        </button>
+        <button id="saveBtn" class="btn-action btn-save">
+            <span>💾</span> GUARDAR
+        </button>
+        <button id="publishBtn" class="btn-action" style="color: #f39c12; border-color: #f39c12;">
+            <span>🌐</span> PUBLICAR
+        </button>
+        <button id="exportBtn" class="btn-action btn-save" style="color: #40c9ff;">
+            <span>📥</span> EXPORTAR EXCEL
+        </button>
+        <button id="clearBtn" class="btn-action btn-clear">
+            <span>🗑️</span> BORRAR TODO
+        </button>
+    </div>
+
+    <script src="coordinacion.js"></script>
+</body>
+
+</html>
